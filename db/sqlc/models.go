@@ -17,7 +17,7 @@ type Account struct {
 }
 
 type Entry struct {
-	Code      int32 `json:"code"`
+	ID        int32 `json:"id"`
 	AccountID int64 `json:"account_id"`
 	// can be positive or negative
 	Amount    int64     `json:"amount"`
