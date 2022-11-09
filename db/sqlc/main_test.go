@@ -20,6 +20,7 @@ var testDB *sql.DB
 func TestMain(m *testing.M) {
 	var err error
 
+	// Establishes a connection to the database
 	testDB, err = sql.Open(dbDriver, dbSource)
 	if err != nil {
 		log.Fatal("Canot connect to DB:", err)
