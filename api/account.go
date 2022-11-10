@@ -2,7 +2,6 @@ package api
 
 import (
 	"database/sql"
-	"fmt"
 	"net/http"
 
 	db "github.com/SoufianeRep/simplebank/db/sqlc"
@@ -109,7 +108,6 @@ func (server *Server) updateAccount(ctx *gin.Context) {
 		ID:      ID.ID,
 		Balance: req.Balance,
 	}
-	fmt.Println(arg)
 
 	acc, err := server.store.UpdateAccount(ctx, arg)
 	if err != nil {
